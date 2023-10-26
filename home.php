@@ -68,7 +68,7 @@
                     <ul
                         class="js-clone-nav d-none d-lg-inline-block text-end site-menu float-end">
                         <li class="cta-button"><a href="#kontak"
-                                style="text-decoration: none;">Kontak</a></li>
+                                style="text-decoration: none;">Booking</a></li>
                     </ul>
                     <a href="#"
                         class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
@@ -613,18 +613,34 @@
                         <div class="col-lg-6">
                             <span class="subheading aos-init"
                                 data-aos="fade-up"
-                                style="color:#034C5A">Kontak Kami </span>
+                                style="color:#034C5A">Booking </span>
                             <h2 class="heading mb-3 aos-init"
                                 data-aos="fade-up"
-                                data-aos-delay="100">Punya pertanyaan? Hubungi
-                                kami
-                                melalui form ini</h2>
+                                data-aos-delay="100">Daftarkan dirimu di RajaAmpat sekarang juga!</h2>
                             <form id="myForm" data-aos="fade-up"
                                 data-aos-delay="100">
+                                <div class="mb-3">
+                                    <label for="NIK" class="form-label">NIK</label>
+                                    <input type="number" id="NIK"
+                                        class="form-control rounded-5 border-5 p-4 shadow-sm"
+                                        style="border-color: #116c7e76;">
+                                </div>
                                 <div class="mb-3">
                                     <label for="nama_lengkap" class="form-label">Nama
                                         Lengkap</label>
                                     <input type="text" id="nama_lengkap"
+                                        class="form-control rounded-5 border-5 p-4 shadow-sm"
+                                        style="border-color: #116c7e76;">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="usia" class="form-label">Usia</label>
+                                    <input type="number" id="usia"
+                                        class="form-control rounded-5 border-5 p-4 shadow-sm"
+                                        style="border-color: #116c7e76;">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tanggal_booking" class="form-label">Usia</label>
+                                    <input type="date" id="usia"
                                         class="form-control rounded-5 border-5 p-4 shadow-sm"
                                         style="border-color: #116c7e76;">
                                 </div>
@@ -640,7 +656,6 @@
                                         class="form-control rounded-5 border-5 p-4 shadow-sm"
                                         style="border-color: #116c7e76;">
                                 </div>
-
                                 <button type="button" id="submitBtn"
                                     class="btn btn-primary px-5 py-2 border-0 shadow-sm rounded-5"
                                     style="background-color:#034C5A">Submit</button>
