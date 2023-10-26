@@ -645,6 +645,12 @@
                                         style="border-color: #116c7e76;">
                                 </div>
                                 <div class="mb-3">
+                                    <label for="tanggal_booking" class="form-label">Usia</label>
+                                    <input type="number" id="usia"
+                                        class="form-control rounded-5 border-5 p-4 shadow-sm"
+                                        style="border-color: #116c7e76;">
+                                </div>
+                                <div class="mb-3">
                                     <label for="kota" class="form-label">Kota</label>
                                     <input type="text" id="kota"
                                         class="form-control rounded-5 border-5 p-4 shadow-sm"
