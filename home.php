@@ -661,7 +661,7 @@
                             data-aos="fade-right"
                             data-aos-delay="100" data-aos-duration="1000">
                             <h2 class="heading mb-5 text-center"
-                                style="color:white">Profil Saya</h2>
+                                style="color:white">Profil Kami</h2>
                             <div class="postcard__subtitle small">
                             </div>
                             <div class="wrapper" style="display: flex;
@@ -673,6 +673,16 @@
                                             class="about d-flex flex-column">
                                             <h4>Soffia Noor Aisyah</h4>
                                             <span>5002201125</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile2 shadow-lg"
+                                    style="background-image: url('assets/images/zaza.png');margin-left:50px">
+                                    <div class="overlay2">
+                                        <div
+                                            class="about d-flex flex-column">
+                                            <h4>Siti Azzalea Annisa</h4>
+                                            <span>5002201045</span>
                                         </div>
                                     </div>
                                 </div>
