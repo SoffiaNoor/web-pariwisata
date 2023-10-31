@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html lang="en">
 
 <head>
@@ -492,6 +495,14 @@
                         <span class="subheading aos-init" data-aos="fade-up" style="color:#034C5A">Booking </span>
                         <h2 class="heading mb-3 aos-init" data-aos="fade-up" data-aos-delay="100">Daftarkan dirimu di
                             RajaAmpat sekarang juga!</h2>
+                        <?php
+                        if (isset($_SESSION["success_message"])) {
+                            echo "<div class='alert alert-success' role='alert'>
+                           " . $_SESSION["success_message"] . "
+                          </div>";
+                            unset($_SESSION["success_message"]); // Clear the message
+                        }
+                        ?>
                         <form id="myForm" data-aos="fade-up" method="post" action="insert_data.php"
                             data-aos-delay="100">
                             <div class="mb-3">
