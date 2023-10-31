@@ -617,77 +617,71 @@
                             <h2 class="heading mb-3 aos-init"
                                 data-aos="fade-up"
                                 data-aos-delay="100">Daftarkan dirimu di RajaAmpat sekarang juga!</h2>
-                            <form id="myForm" data-aos="fade-up"
+                            <form id="myForm" data-aos="fade-up" method="post" action="insert_data.php"
                                 data-aos-delay="100">
                                 <div class="mb-3">
                                     <label for="NIK" class="form-label">NIK</label>
-                                    <input type="text" id="NIK"
+                                    <input type="text" id="NIK" name = "NIK"
                                         class="form-control rounded-5 border-5 p-4 shadow-sm"
-                                        style="border-color: #116c7e76;">
+                                        style="border-color: #116c7e76;" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="Nama" class="form-label">Nama
-                                        Lengkap</label>
-                                    <input type="text" id="Nama"
+                                    <label for="Nama" class="form-label">Nama Lengkap</label>
+                                    <input type="text" id="Nama" name="Nama"
                                         class="form-control rounded-5 border-5 p-4 shadow-sm"
-                                        style="border-color: #116c7e76;">
+                                        style="border-color: #116c7e76;" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="Usia" class="form-label">Usia</label>
-                                    <input type="number" id="Usia"
+                                    <input type="number" id="Usia" name="Usia"
                                         class="form-control rounded-5 border-5 p-4 shadow-sm"
-                                        style="border-color: #116c7e76;">
+                                        style="border-color: #116c7e76;" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="TanggalBooking" class="form-label">Tanggal Booking</label>
-                                    <input type="date" id="TanggalBooking"
+                                    <input type="date" id="TanggalBooking" name="TanggalBooking"
                                         class="form-control rounded-5 border-5 p-4 shadow-sm"
-                                        style="border-color: #116c7e76;">
+                                        style="border-color: #116c7e76;" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="Email" class="form-label">Email</label>
-                                    <input type="text" id="Email"
+                                    <input type="email" id="Email" name="Email"
                                         class="form-control rounded-5 border-5 p-4 shadow-sm"
-                                        style="border-color: #116c7e76;">
+                                        style="border-color: #116c7e76;" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="NoTelpon" class="form-label">Nomor Telpon</label>
-                                    <input type="text" id="NoTelpon"
+                                    <input type="text" id="NoTelpon" name="NoTelpon"
                                         class="form-control rounded-5 border-5 p-4 shadow-sm"
-                                        style="border-color: #116c7e76;">
+                                        style="border-color: #116c7e76;" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="KotaAsal" class="form-label">Kota Asal</label>
-                                    <input type="text" id="KotaAsal"
+                                    <input type="text" id="KotaAsal" name="KotaAsal"
                                         class="form-control rounded-5 border-5 p-4 shadow-sm"
-                                        style="border-color: #116c7e76;">
+                                        style="border-color: #116c7e76;" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="Destinasi">Destinasi</label>
                                     <select class="form-select rounded-5 border-5 p-3 shadow-sm" 
-                                        aria-label="Pilih Destinasi"
-                                        style="border-color: #116c7e76;">
-                                        <option selected>Pilih Destinasi</option>
-                                        <option value="1">Wajag Island</option>
-                                        <option value="2">Waigeo</option>
-                                        <option value="3">Mansuar</option>
+                                        aria-label="Pilih Destinasi" name = "Destinasi"
+                                        style="border-color: #116c7e76;" required>
+                                        <!-- <option selected>Pilih Destinasi</option> -->
+                                        <option value="Wajag Island">Wajag Island</option>
+                                        <option value="Waigeo">Waigeo</option>
+                                        <option value="Mansuar">Mansuar</option>
                                     </select> 
                                 </div>
                                 <div class="mb-3">
                                     <label for="JumlahOrang" class="form-label">Jumlah Orang</label>
-                                    <input type="number" id="JumlahOrang"
+                                    <input type="number" id="JumlahOrang" name="JumlahOrang"
                                         class="form-control rounded-5 border-5 p-4 shadow-sm"
-                                        style="border-color: #116c7e76;">
+                                        style="border-color: #116c7e76;" required>
                                 </div>
-                                <!-- <div class="mb-3">
-                                    <label for="pertanyaan" class="form-label">Pertanyaan</label>
-                                    <input type="text" id="pertanyaan"
-                                        class="form-control rounded-5 border-5 p-4 shadow-sm"
-                                        style="border-color: #116c7e76;">
-                                </div> -->
-                                <button type="button" id="submitBtn"
+                                <button type="submit" id="submitBtn" value = "Submit"
                                     class="btn btn-primary px-5 py-2 border-0 shadow-sm rounded-5"
-                                    style="background-color:#034C5A">Submit</button>
+                                    style="background-color:#034C5A">Submit
+                                </button>
                             </form>
                         </div>
                     </div>
