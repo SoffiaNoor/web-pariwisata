@@ -51,7 +51,7 @@
     <nav class="site-nav" style="position: fixed;" id="main-navbar">
         <div class="container">
             <div class="site-navigation">
-                <a class="logo m-0 float-start" href="/view/home.html" style="text-decoration: none;">Raja Ampat</a>
+                <a class="logo m-0 float-start" href="home.php" style="text-decoration: none;">Raja Ampat</a>
                 <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-start">
                     <li class="active"><a href="#tentang" style="text-decoration: none;">Tentang</a></li>
                     <li><a href="#destinasi" style="text-decoration: none;">Destinasi</a></li>
