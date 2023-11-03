@@ -17,24 +17,27 @@ if ($connection->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $NIK = $_POST['NIK'];
     $Nama = $_POST['Nama'];
-    $Usia = (int)$_POST['Usia'];
+    $Usia = (int) $_POST['Usia'];
     $TanggalBooking = $_POST['TanggalBooking'];
     $Email = $_POST['Email'];
     $NoTelpon = $_POST['NoTelpon'];
     $KotaAsal = $_POST['KotaAsal'];
     $Destinasi = $_POST['Destinasi'];
-    $JumlahOrang = (int)$_POST['JumlahOrang'];
+    $JumlahOrang = (int) $_POST['JumlahOrang'];
     // $CreatedOn =  time(); 
     // $UpdatedOn = null;
 
     // Insert data into the database using MySQLi
-    $sql = "INSERT INTO booking (NIK, Nama, Usia, TanggalBooking, Email, NoTelpon, KotaAsal, Destinasi, JumlahOrang, CreatedOn, UpdatedOn) 
+    $sql = "INSERT INTO booking (NIK, Nama, Usia, TanggalBooking, Email, NoTelpon, KotaAsal, Destinasi, JumlahOrang, CreatedOn, UpdatedBy) 
             VALUES ('$NIK', '$Nama', $Usia, '$TanggalBooking', 
                     '$Email', '$NoTelpon', '$KotaAsal', '$Destinasi', 
-                    $JumlahOrang, NOW(), NOW())";
-    
-    if ($connection-> query($sql) === true) {
-        echo "Data has been successfully stored in the database using MySQLi.";
+                    $JumlahOrang, NOW(), '0000-00-00 00:00:00')";
+
+    if ($connection->query($sql) === true) {
+        header("Location: home.php#kontak");
+        session_start();
+        $_SESSION["success_message"] = "Data stored successfully!";
+        exit;
     } else {
         echo "Error: " . $connection->error;
     }
