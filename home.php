@@ -523,6 +523,14 @@ session_start();
                                     class="form-control rounded-5 border-5 p-4 shadow-sm"
                                     style="border-color: #116c7e76;" required>
                             </div>
+                            <?php
+                                // session_start();
+                                if (isset($_SESSION["error_age"])) {
+                                    echo "<p class = 'text-danger'>" . $_SESSION["error_age"] . "</p>";
+                                    unset($_SESSION["error_age"]); // Clear the message
+                                }
+                            ?>
+
                             <div class="mb-3">
                                 <label for="TanggalBooking" class="form-label">Tanggal Booking</label>
                                 <input type="date" id="TanggalBooking" name="TanggalBooking"
@@ -557,12 +565,21 @@ session_start();
                                     <option value="Mansuar">Mansuar</option>
                                 </select>
                             </div>
+
                             <div class="mb-3">
                                 <label for="JumlahOrang" class="form-label">Jumlah Orang</label>
                                 <input type="number" id="JumlahOrang" name="JumlahOrang"
                                     class="form-control rounded-5 border-5 p-4 shadow-sm"
                                     style="border-color: #116c7e76;" required>
                             </div>
+                            <?php
+                                // session_start();
+                                if (isset($_SESSION["error_jumlahOrang"])) {
+                                    echo "<p class='text-danger'>" . $_SESSION["error_jumlahOrang"] . "</p>";
+                                    unset($_SESSION["error_jumlahOrang"]); // Clear the message
+                                }
+                            ?>
+                            
                             <button type="submit" id="submitBtn" value="Submit"
                                 class="btn btn-primary px-5 py-2 border-0 shadow-sm rounded-5"
                                 style="background-color:#034C5A">Submit

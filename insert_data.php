@@ -13,6 +13,8 @@ if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
 
+session_start();
+
 // Process form data
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $NIK = $_POST['NIK'];
@@ -27,21 +29,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // $CreatedOn =  time(); 
     // $UpdatedOn = null;
 
-    // Insert data into the database using MySQLi
-    $sql = "INSERT INTO booking (NIK, Nama, Usia, TanggalBooking, Email, NoTelpon, KotaAsal, Destinasi, JumlahOrang, CreatedOn, UpdatedBy) 
-            VALUES ('$NIK', '$Nama', $Usia, '$TanggalBooking', 
-                    '$Email', '$NoTelpon', '$KotaAsal', '$Destinasi', 
-                    $JumlahOrang, NOW(), '0000-00-00 00:00:00')";
-
-    if ($connection->query($sql) === true) {
+    if ($Usia < 18) {        
+        // // alert('You must be above 18 to fill the form');
+        // echo "<script>alert('You Must be above 18');</script>";
+        // $Usia = 0;
         header("Location: home.php#kontak");
-        session_start();
-        $_SESSION["success_message"] = "Data stored successfully!";
+        // session_start();
+        $_SESSION["error_age"] = "You must be above 18 to fill the form!";
         exit;
-    } else {
-        echo "Error: " . $connection->error;
+        // echo'Must be above 18';
     }
+    elseif ($JumlahOrang < 1) {
+        header("Location: home.php#kontak");
+        // session_start();
+        $_SESSION["error_jumlahOrang"] = "Jumlah orang minimal 1!";
+        // exit;
+    }
+    else{
+        // Insert data into the database using MySQLi
+        $sql = "INSERT INTO booking (NIK, Nama, Usia, TanggalBooking, Email, NoTelpon, KotaAsal, Destinasi, JumlahOrang, CreatedOn, UpdatedOn) 
+                VALUES ('$NIK', '$Nama', $Usia, '$TanggalBooking', 
+                        '$Email', '$NoTelpon', '$KotaAsal', '$Destinasi', 
+                        $JumlahOrang, NOW(), '0000-00-00 00:00:00')";
 
+        if ($connection->query($sql) === true) {
+            header("Location: home.php#kontak");
+            // session_start();
+            $_SESSION["success_message"] = "Data stored successfully!";
+            exit;
+        } else {
+            echo "Error: " . $connection->error;
+        }
+    }
 }
 
 // Close the database connection
