@@ -47,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     else{
         // Insert data into the database using MySQLi
-        $sql = "INSERT INTO booking (NIK, Nama, Usia, TanggalBooking, Email, NoTelpon, KotaAsal, Destinasi, JumlahOrang, CreatedOn, UpdatedOn) 
-                VALUES ('$NIK', '$Nama', $Usia, '$TanggalBooking', 
+        $sql = "INSERT INTO booking_uuid (ID, NIK, Nama, Usia, TanggalBooking, Email, NoTelpon, KotaAsal, Destinasi, JumlahOrang, CreatedOn, UpdatedOn) 
+                VALUES (UUID(), '$NIK', '$Nama', $Usia, '$TanggalBooking', 
                         '$Email', '$NoTelpon', '$KotaAsal', '$Destinasi', 
                         $JumlahOrang, NOW(), '0000-00-00 00:00:00')";
 
