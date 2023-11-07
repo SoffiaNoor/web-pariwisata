@@ -505,6 +505,13 @@ session_start();
                         ?>
                         <form id="myForm" data-aos="fade-up" method="post" action="insert_data.php"
                             data-aos-delay="100">
+                            <?php
+                            // session_start();
+                            if (isset($_SESSION["error_nik"])) {
+                                echo "<p class='text-danger'>" . $_SESSION["error_nik"] . "</p>";
+                                unset($_SESSION["error_nik"]); // Clear the message
+                            }
+                            ?>
                             <div class="mb-3">
                                 <label for="NIK" class="form-label">NIK</label>
                                 <input type="text" id="NIK" name="NIK"
@@ -524,11 +531,11 @@ session_start();
                                     style="border-color: #116c7e76;" required>
                             </div>
                             <?php
-                                // session_start();
-                                if (isset($_SESSION["error_age"])) {
-                                    echo "<p class = 'text-danger'>" . $_SESSION["error_age"] . "</p>";
-                                    unset($_SESSION["error_age"]); // Clear the message
-                                }
+                            // session_start();
+                            if (isset($_SESSION["error_age"])) {
+                                echo "<p class = 'text-danger'>" . $_SESSION["error_age"] . "</p>";
+                                unset($_SESSION["error_age"]); // Clear the message
+                            }
                             ?>
 
                             <div class="mb-3">
@@ -543,6 +550,13 @@ session_start();
                                     class="form-control rounded-5 border-5 p-4 shadow-sm"
                                     style="border-color: #116c7e76;" required>
                             </div>
+                            <?php
+                            // session_start();
+                            if (isset($_SESSION["error_notelpon"])) {
+                                echo "<p class='text-danger'>" . $_SESSION["error_notelpon"] . "</p>";
+                                unset($_SESSION["error_notelpon"]); // Clear the message
+                            }
+                            ?>
                             <div class="mb-3">
                                 <label for="NoTelpon" class="form-label">Nomor Telpon</label>
                                 <input type="text" id="NoTelpon" name="NoTelpon"
@@ -573,13 +587,13 @@ session_start();
                                     style="border-color: #116c7e76;" required>
                             </div>
                             <?php
-                                // session_start();
-                                if (isset($_SESSION["error_jumlahOrang"])) {
-                                    echo "<p class='text-danger'>" . $_SESSION["error_jumlahOrang"] . "</p>";
-                                    unset($_SESSION["error_jumlahOrang"]); // Clear the message
-                                }
+                            // session_start();
+                            if (isset($_SESSION["error_jumlahOrang"])) {
+                                echo "<p class='text-danger'>" . $_SESSION["error_jumlahOrang"] . "</p>";
+                                unset($_SESSION["error_jumlahOrang"]); // Clear the message
+                            }
                             ?>
-                            
+
                             <button type="submit" id="submitBtn" value="Submit"
                                 class="btn btn-primary px-5 py-2 border-0 shadow-sm rounded-5"
                                 style="background-color:#034C5A">Submit
@@ -601,7 +615,7 @@ session_start();
                         </div>
                         <div class="wrapper" style="display: flex;
                             justify-content: center;">
-                            <div class="profile2 shadow-lg" style="background-image: url('assets/images/yuya.png');">
+                            <div class="profile2 shadow-lg" style="background-image: url('assets/images/profile.jpg');">
                                 <div class="overlay2">
                                     <div class="about d-flex flex-column">
                                         <h4>Soffia Noor Aisyah</h4>
@@ -610,7 +624,7 @@ session_start();
                                 </div>
                             </div>
                             <div class="profile2 shadow-lg"
-                                style="background-image: url('assets/images/kentaro.jpg');margin-left:50px">
+                                style="background-image: url('assets/images/zaza.png');margin-left:50px">
                                 <div class="overlay2">
                                     <div class="about d-flex flex-column">
                                         <h4>Siti Azzalea Annisa</h4>
